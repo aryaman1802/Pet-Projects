@@ -5,8 +5,6 @@ This repo contains my pet projects. You might see a decent web interface (Stream
 
 To clone (download) all my pet projects, open the terminal, and type:
 
-`git clone "https://github.com/BansalAryamanBansal/Pet-Projects".git`
+git clone "https://github.com/BansalAryamanBansal/Pet-Projects".git
 
 This will download all my pet projects on your computer.
-
-Note: I'm using Linux Ubuntu, so this might not work on Windows.
