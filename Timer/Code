@@ -1,0 +1,105 @@
+from pygame import mixer
+import time
+from gtts import gTTS
+import os
+
+def time_converter(unit='s', time=0):
+    """Converts time in hours/minutes to seconds"""
+    unit = unit.lower()
+    if unit=='s':
+        return time
+    elif unit=='m':
+        return time*60
+    elif unit=='h':
+        return time*3600
+
+def play_reminder(Access=False):
+    language = 'en'
+    if Access:
+        output = gTTS(text="Access Granted!", lang=language, slow=False, tld='ca')
+        output.save("reminder.mp3")
+        os.system("start reminder.mp3")
+        time.sleep(1)  # sometimes audio is not played fully so a break of 1 second is given
+        # Play the reminder
+        myText = reminder
+        if myText == '':
+            myText='Aryaman Bansal is a genius!'
+
+        output = gTTS(text=myText, lang=language, slow=False, tld='ca')
+        output.save("reminder.mp3")
+        os.system("start reminder.mp3")
+        time.sleep(1)  # sometimes audio is not played fully so a break of 1 second is given
+    else:
+        output = gTTS(text="Access Denied!", lang=language, slow=False, tld='ca')
+        output.save("reminder.mp3")
+        os.system("start reminder.mp3")
+        time.sleep(1)  # sometimes audio is not played fully so a break of 1 second is given
+        # Start the intruder alarm
+        counter = 1
+        while counter<=10:
+            output = gTTS(text="Intruder Alert", lang=language, slow=False, tld='ca')
+            output.save("intruder_alert.mp3")
+            os.system("start intruder_alert.mp3")
+            # Starting the mixer
+            mixer.init()
+            # Loading the song
+            mixer.music.load('morse_dash.wav')
+            # Setting the volume
+            mixer.music.set_volume(1)
+            # Start playing the song
+            mixer.music.play()
+            counter += 1
+            # wait for 1 second
+            time.sleep(1)
+
+# define the countdown function
+def countdown(t,reminder,password=''):
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t -= 1
+    print("00:00")
+    counter=1
+    while counter<=5:
+        # Starting the mixer
+        mixer.init()
+        # Loading the song
+        mixer.music.load('morse_dash.wav')
+        # Setting the volume
+        mixer.music.set_volume(0.7)
+        # Start playing the song
+        mixer.music.play()
+        counter += 1 
+        # wait for 0.25 seconds
+        time.sleep(0.25)
+        
+    language = 'en'
+    myText = "Please acknowledge your presence! Type the password to continue: "
+    output = gTTS(text=myText, lang=language, slow=False, tld='ca')
+    output.save("reminder.mp3")
+    os.system("start reminder.mp3")
+    if password != '':
+        # Password requirement
+        pwd = input("Type the password to continue: ")
+        if pwd == password:
+            play_reminder(True)
+        else:
+            play_reminder()
+    else:
+        # No password requirement
+        play_reminder(True)
+    pass
+
+
+print("You can enter time in either hours, minutes, or seconds."
+    + "\nEnter:\n\th for hours\n\tm for minutes\n\ts for seconds")
+unit = input("Enter the unit(h/m/s): ")
+t = float(input("Enter time in that unit: "))
+
+t = int(time_converter(unit, t))  # returns time(t) in seconds
+reminder = input("Enter your reminder: ")
+password = input("Enter a password: ")
+
+countdown(t,reminder,password)
