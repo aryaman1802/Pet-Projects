@@ -16,7 +16,7 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 
 <br>
 
-**Model-Free Algorithms:**
+**Model-Free Algorithms:** 
 - MC (Monte Carlo) Prediction/Control
 - GLIE (Greedy in the Limit with Infinite Exploration) MC Control
 - SARSA on-policy TD (Temporal Difference) control
@@ -25,13 +25,13 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 
 <br>
 
-**Function Approximation Algorithms:**
+**Function Approximation Algorithms:** *(coming soon)*
 - N-Step SARSA Control
 - SARSA Control
 
 <br>
 
-**Deep Q-Learning Algorithm (and its variants)**
+**Deep Q-Learning Algorithm (and its variants)** *(coming soon)*
 - Simple DQN (Deep Q-Network)
 - Replay Buffer
 - TD Loss
