@@ -16,7 +16,7 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 
 <br>
 
-- **Model-Free Algorithms:**
+**Model-Free Algorithms:**
 - MC (Monte Carlo) Prediction/Control
 - GLIE (Greedy in the Limit with Infinite Exploration) MC Control
 - SARSA on-policy TD (Temporal Difference) control
