@@ -7,6 +7,9 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 **Action Selection Strategies:**
 - Greedy
 - Epsilon-Greedy
+- Probability
+- Epsilon-Soft *(coming soon)*
+- Upper-Confidence Bound *(coming soon)*
 
 <br>
 
