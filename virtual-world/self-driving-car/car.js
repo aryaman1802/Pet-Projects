@@ -11,11 +11,13 @@ class Car{
         this.friction = 0.05;
         this.angle = 0;
 
+        this.sensor = new Sensor(this);
         this.controls = new Controls();
     }
 
     update(){
         this.#move();
+        this.sensor.update();
     }
 
     #move(){
@@ -96,5 +98,7 @@ class Car{
         // without restore, the canvas will apply translation and 
         // keep rotating infinitely
         ctx.restore();
+
+        this.sensor.draw(ctx);
     }
 }
