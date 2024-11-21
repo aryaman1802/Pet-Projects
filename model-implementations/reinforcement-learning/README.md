@@ -23,6 +23,7 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 - MC (Monte Carlo) Prediction/Control
 - GLIE (Greedy in the Limit with Infinite Exploration) MC Control
 - Off-policy MC Control
+- TD(0) for Estimation
 - SARSA on-policy TD (Temporal Difference) control
 - Q-learning off-policy TD Control
 - Expected SARSA TD Control
