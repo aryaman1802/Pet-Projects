@@ -27,6 +27,8 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 - SARSA on-policy TD (Temporal Difference) control
 - Q-learning off-policy TD Control
 - Expected SARSA TD Control (on-policy version uploaded;  off-policy version coming soon)
+- Q-learning with Replay Buffer
+- Q-learning for continous state spaces
 
 <br>
 
