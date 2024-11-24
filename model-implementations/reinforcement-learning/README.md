@@ -26,7 +26,7 @@ This directory contains papers related to Reinforcement Learning. In addition, i
 - TD(0) for Estimation
 - SARSA on-policy TD (Temporal Difference) control
 - Q-learning off-policy TD Control
-- Expected SARSA TD Control
+- Expected SARSA TD Control (on-policy version uploaded;  off-policy version coming soon)
 
 <br>
 
