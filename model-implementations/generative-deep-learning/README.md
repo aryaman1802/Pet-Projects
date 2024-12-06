@@ -6,7 +6,7 @@ This directory contains implementations of Generative Deep Learning models.
 - Variational Autoencoder (*coming soon*)
 - Generative Adversarial Network (GAN)
 - Deep Convolutional GAN (DCGAN)
-- Wasserstein GAN (WGAN)
+- Wasserstein GAN with Gradient Penalty (WGAN-GP)
 - Conditional GAN (CGAN)
 - Pix2Pix (*coming soon*)
 - CycleGAN (*coming soon*)
